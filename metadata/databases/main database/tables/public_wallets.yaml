@@ -1,0 +1,11 @@
+table:
+  name: wallets
+  schema: public
+select_permissions:
+- permission:
+    columns:
+    - account
+    - address
+    - network
+    filter: {}
+  role: anon

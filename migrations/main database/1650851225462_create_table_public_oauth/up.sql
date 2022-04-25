@@ -1,0 +1,1 @@
+CREATE TABLE "public"."oauth" ("account" text NOT NULL, "provider" text NOT NULL, "access_token" text NOT NULL, "access_token_secret" text NOT NULL, "id" serial NOT NULL, PRIMARY KEY ("id") , FOREIGN KEY ("account") REFERENCES "public"."accounts"("username") ON UPDATE restrict ON DELETE restrict, UNIQUE ("account"));

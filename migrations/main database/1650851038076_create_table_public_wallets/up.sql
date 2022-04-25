@@ -1,0 +1,1 @@
+CREATE TABLE "public"."wallets" ("account" text NOT NULL, "network" text NOT NULL, "address" text NOT NULL, "created_at" timestamptz NOT NULL DEFAULT now(), PRIMARY KEY ("account") , UNIQUE ("account"));
