@@ -6,28 +6,6 @@ Hasura service is responsible for
 - graphql engine.
 - attribute based access control.
 
-## Dev
-
-You need the following global dependencies on your host machine.
-
-- docker https://docs.docker.com/get-docker/
-- docker compose https://docs.docker.com/compose/
-- task manager https://taskfile.dev/#/installation
-- hasura cli https://hasura.io/docs/latest/graphql/core/hasura-cli/index.html
-  ` yarn global add hasura-cli@2.3.0-beta.1`
-
-We use http://taskfile.dev to manage some comon task.  .  
-Make sure you create a `.env` file so docker compose can read your environment vars.
-
-```
-- `docker-compose build` build all containers,
-- `docker-compose up` starts all containers.
-- `docker-compose up --build` rebuilds and starts all containers.
-- `docker-compose exec [service_name] [bash | sh]` open bash or sh in a container.
-- `docker-compose stop` stops all containers.
-- `docker-compose down` stops and removes all containers.
-- `docker-compose restart` restarts all services.
-```
 
 ## Directory Structure
 
@@ -36,29 +14,26 @@ Make sure you create a `.env` file so docker compose can read your environment v
 ├── metadata/ ........................................... hasura metadata
 ├── migrations/ ......................................... hasura migrations
 ├── config.yaml.......................................... hasura config
-├── docker-compose.yml .................................. docker compose config for local dev
-├── Taskfile.yml ........................................ task defitions for local dev
 └── .env ................................................ environment variables ( hasura variables )
 ```
 
-## Deployments
+## Docker 
 
-Automatic deployments from `main` branch to hasura cloud.
+```
+# Build the image
+docker build -t powerstack-hasura:local .
 
-## Auth
+# Start a container
+docker run --env-file .env -p 3000:3000 -d powerstack-hasura:local
 
-API access is restricted via a hasura auth webhook. See https://github.com/powerstack/powerstack-auth
+# Get container ID
+docker ps
 
-## Database
-
-Database lives in Google Cloud.
-
-https://hasura.io/docs/latest/graphql/cloud/getting-started/cloud-databases/gcp/
+# Print app output
+docker logs <container id>
+```
 
 
-## Contributing
-
-Read the [contributing guidelines](https://developers.blockmatic.io) for details.
 
 ## Blockmatic
 
