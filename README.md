@@ -6,6 +6,27 @@ Hasura service is responsible for
 - graphql engine.
 - attribute based access control.
 
+## Requirements
+
+- Docker https://www.docker.com
+- Docker Compose https://docs.docker.com/compose
+- Task https://taskfile.dev
+
+## Conventions
+
+https://github.com/blockmatic/powerstack-playbook
+
+## Getting Started
+
+```
+git clone git@github.com:blockmatic/powerstack-hasura.git
+cd powerstack-hasura
+cp .env-sample .env # and edit the environment variables
+task build
+task run
+```
+
+Ref [Hasura Environment Variables](https://hasura.io/docs/latest/graphql/core/hasura-cli/config-reference/#environment-variables)
 
 ## Directory Structure
 
@@ -14,26 +35,45 @@ Hasura service is responsible for
 ├── metadata/ ........................................... hasura metadata
 ├── migrations/ ......................................... hasura migrations
 ├── config.yaml.......................................... hasura config
-└── .env ................................................ environment variables ( hasura variables )
+├── taskfile.yaml........................................ dev tasks config
+└── .env ................................................ environment variables ([ hasura variables] )
 ```
 
-## Docker 
+## Docker
 
 ```
 # Build the image
 docker build -t powerstack-hasura:local .
 
 # Start a container
-docker run --env-file .env -p 3000:3000 -d powerstack-hasura:local
+docker run --name powerstack-hasura --env-file .env -p 3300:3300 -d powerstack-hasura:local
 
 # Get container ID
-docker ps
+docker ps -aqf "name=^powerstack-hasura$"
 
 # Print app output
-docker logs <container id>
+docker logs -f powerstack-hasura
+
+# Stop, start, restart, kill
+docker stop powerstack-hasura
+docker start powerstack-hasura
+docker restart powerstack-hasura
+docker kill powerstack-hasura
 ```
 
+## Database Migrations
 
+Hasura Database Migrations enable a rock-solid deployment.
+
+https://hasura.io/docs/latest/graphql/core/migrations/index
+
+## Deployment
+
+...
+
+## Learn
+
+https://learn.blockmatic.io
 
 ## Blockmatic
 
