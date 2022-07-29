@@ -1,5 +1,13 @@
 # PowerStack Hasura
 
+GraphQL Engine for PowerStack projects.
+
+⚡️ [PowerStack: a powerful fullstack web3 development framework](https://powerstack.xyz).
+
+_Disclaimer: This is a work in progress. Will be finalized soon._
+
+## General 
+
 Hasura service is responsible for 
 
 - postgres migrations.
