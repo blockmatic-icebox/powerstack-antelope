@@ -20,10 +20,6 @@ Hasura service is responsible for
 - Docker Compose https://docs.docker.com/compose
 - Task https://taskfile.dev
 
-## Conventions
-
-https://github.com/blockmatic/powerstack-playbook
-
 ## Getting Started
 
 ```
