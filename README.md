@@ -79,6 +79,12 @@ https://hasura.io/docs/latest/graphql/core/migrations/index
 
 https://learn.blockmatic.io
 
+## Contributing
+
+We use a [Discussions Board](https://github.com/blockmatic/powerstack-docs/discussions/1) to gather thoughts, bug reports and feature requests from the community.
+
+Follow the standard Github Flow for PRs. [Contributing Guidelines](https://docs.powerstack.xyz/powerstack/other-resources/contributing-guidelines).
+
 ## Blockmatic
 
 Blockmatic is building a robust ecosystem of people and tools for the development of blockchain applications.
