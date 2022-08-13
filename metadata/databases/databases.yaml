@@ -1,4 +1,4 @@
-- name: main database
+- name: powerstack
   kind: postgres
   configuration:
     connection_info:
@@ -6,4 +6,4 @@
         from_env: HASURA_GRAPHQL_DATABASE_URL
       isolation_level: read-committed
       use_prepared_statements: false
-  tables: "!include main database/tables/tables.yaml"
+  tables: "!include powerstack/tables/tables.yaml"
