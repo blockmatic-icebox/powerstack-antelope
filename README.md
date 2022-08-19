@@ -10,16 +10,23 @@ _Disclaimer: This is a work in progress. Will be finalized soon._
 
 Hasura service is responsible for 
 
-- postgres migrations.
-- graphql engine.
-- attribute based access control.
+- Database migrations.
+- GraphQL API Gateway.
+- Access control.
 
 ## Requirements
 
-- Docker https://www.docker.com
-- Docker Compose https://docs.docker.com/compose
-- Task https://taskfile.dev
+- Docker [docker.com](https://www.docker.com)
+- Docker Compose [docs.docker.com/compose](https://docs.docker.com/compose)
+- Task [taskfile.dev](https://taskfile.dev)
 
+## Hasura Fundamentals
+
+- [How Hasura GraphQL engine works](https://hasura.io/docs/latest/getting-started/how-it-works/index/)
+ -[Filter query results / search queries](https://hasura.io/docs/latest/queries/postgres/query-filters/)
+- [Postgres JSON and JSONB type support on GraphQL](https://hasura.io/blog/postgres-json-and-jsonb-type-support-on-graphql-41f586e47536/)
+- [Authentication with JWT](https://hasura.io/docs/latest/auth/authentication/jwt/)
+- [Access Control](https://hasura.io/docs/latest/auth/authorization/index/)
 ## Getting Started
 
 ```
@@ -67,17 +74,11 @@ docker kill powerstack-hasura
 
 ## Database Migrations
 
-Hasura Database Migrations enable a rock-solid deployment.
-
-https://hasura.io/docs/latest/graphql/core/migrations/index
+[Hasura Database Migrations](https://hasura.io/docs/latest/graphql/core/migrations/index) enable a rock-solid deployment.
 
 ## Deployment
 
 ...
-
-## Learn
-
-https://learn.blockmatic.io
 
 ## Contributing
 
