@@ -1,4 +1,4 @@
-FROM hasura/graphql-engine:v2.3.0.cli-migrations-v3
+FROM hasura/graphql-engine:latest.cli-migrations-v3
 
 ENV HASURA_GRAPHQL_MIGRATIONS_DIR=/migrations
 ENV HASURA_GRAPHQL_METADATA_DIR=/metadata
